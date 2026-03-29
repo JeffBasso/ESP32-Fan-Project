@@ -1,0 +1,31 @@
+{
+  "configurations": [
+    {
+      "name": "PlatformIO",
+      "includePath": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/.pio/libdeps/seeed_xiao_esp32s3/**",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/cores/esp32",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32/libraries/**",
+        "${env:USERPROFILE}/.platformio/packages/framework-arduinoespressif32-libs/esp32s3/include/**",
+        "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/xtensa-esp-elf/include",
+        "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0",
+        "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/xtensa-esp-elf/include/c++/14.2.0/xtensa-esp-elf",
+        "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/lib/gcc/xtensa-esp-elf/14.2.0/include"
+      ],
+      "defines": [
+        "ARDUINO=10816",
+        "ARDUINO_XIAO_ESP32S3",
+        "ARDUINO_ARCH_ESP32",
+        "ESP32",
+        "CONFIG_IDF_TARGET_ESP32S3",
+        "F_CPU=240000000L"
+      ],
+      "compilerPath": "${env:USERPROFILE}/.platformio/packages/toolchain-xtensa-esp-elf/bin/xtensa-esp-elf-gcc.exe",
+      "cStandard": "gnu17",
+      "cppStandard": "gnu++17",
+      "intelliSenseMode": "gcc-x64"
+    }
+  ],
+  "version": 4
+}

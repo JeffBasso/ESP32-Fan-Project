@@ -1,0 +1,56 @@
+# Doxyfile — Vishes Seedling Fan Controller
+# Run: doxygen Doxyfile  (from project root)
+# Output: docs/html/index.html
+
+#---------------------------------------------------------------------------
+# Project
+#---------------------------------------------------------------------------
+PROJECT_NAME           = "Vishes Seedling Fan Controller"
+PROJECT_BRIEF          = "ESP32-S3 PID fan controller with ESPDash dashboard and BLE provisioning"
+PROJECT_NUMBER         = 1.0.0
+OUTPUT_DIRECTORY       = docs
+
+#---------------------------------------------------------------------------
+# Input
+#---------------------------------------------------------------------------
+INPUT                  = README.md src
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = NO
+EXCLUDE_PATTERNS       = *.bak
+USE_MDFILE_AS_MAINPAGE = README.md
+MARKDOWN_SUPPORT       = YES
+
+#---------------------------------------------------------------------------
+# Output formats
+#---------------------------------------------------------------------------
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+#---------------------------------------------------------------------------
+# Doxygen Awesome theme
+#---------------------------------------------------------------------------
+HTML_EXTRA_STYLESHEET  = docs/doxygen-awesome.css
+HTML_COLORSTYLE        = LIGHT
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+FULL_SIDEBAR           = NO
+
+#---------------------------------------------------------------------------
+# Extraction — document everything, even undocumented items
+#---------------------------------------------------------------------------
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+
+#---------------------------------------------------------------------------
+# Diagrams — set to NO if Graphviz is not installed
+#---------------------------------------------------------------------------
+HAVE_DOT               = NO
+
+#---------------------------------------------------------------------------
+# Source browsing — shows the actual source code in the docs
+#---------------------------------------------------------------------------
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = NO

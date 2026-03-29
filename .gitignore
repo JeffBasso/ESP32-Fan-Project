@@ -1,0 +1,12 @@
+# PlatformIO build output
+.pio
+
+# Local secrets — copy src/config_local.h.example to src/config_local.h
+src/config_local.h
+
+# Generated documentation output
+docs/html
+docs/latex
+
+# Old backup files
+src/*.bak

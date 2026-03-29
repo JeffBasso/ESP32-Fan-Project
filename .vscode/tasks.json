@@ -1,0 +1,115 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "PIO: Build",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/pio run",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PIO: Upload",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/pio run --target upload",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PIO: Monitor",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/pio device monitor --baud 115200",
+      "group": "test",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PIO: Reset",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/python -m esptool --chip esp32s3 run",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PIO: Upload + Monitor",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/pio run --target upload; ~/.platformio/penv/Scripts/pio device monitor --baud 115200",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "PIO: Build + Upload + Monitor",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/pio run --target upload; ~/.platformio/penv/Scripts/pio device monitor --baud 115200",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+    ,
+    {
+      "label": "Docs: Generate README",
+      "type": "shell",
+      "command": "~/.platformio/penv/Scripts/python scripts/gen_readme.py",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Generate Doxygen",
+      "type": "shell",
+      "command": "doxygen Doxyfile",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Open HTML Docs",
+      "type": "shell",
+      "command": "start docs/html/index.html",
+      "group": "none",
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Docs: Generate + Open",
+      "dependsOrder": "sequence",
+      "dependsOn": ["Docs: Generate README", "Docs: Generate Doxygen", "Docs: Open HTML Docs"],
+      "group": "none",
+      "problemMatcher": []
+    }
+  ]
+}

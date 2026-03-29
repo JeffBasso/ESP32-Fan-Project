@@ -10,3 +10,6 @@ docs/latex
 
 # Old backup files
 src/*.bak
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
